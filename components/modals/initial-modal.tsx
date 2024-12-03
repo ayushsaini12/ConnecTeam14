@@ -60,7 +60,7 @@ export function InitialModal() {
     setIsMounted(true);
     const fetchCategories = async () => {
       try {
-        const response = await axios.get<Category[]>("http://localhost:3000/api/category");
+        const response = await axios.get<Category[]>("/api/category");
         setCategories(response.data);
       } catch (error) {
         console.error("Failed to fetch categories:", error);
